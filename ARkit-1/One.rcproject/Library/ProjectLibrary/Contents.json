@@ -1,12 +1,22 @@
 [
   {
-    "libraryIdentifier" : "34c32c6af7c4fe9a3417980911022951",
+    "libraryIdentifier" : "888b4bbe3484c31f9dfcd15cb242a76b",
     "format" : "model",
-    "displayName" : "adg_qlj.usdz"
+    "displayName" : "xietaiqi.usdz"
   },
   {
-    "libraryIdentifier" : "b2528370dd718ec250979b686987a967",
+    "libraryIdentifier" : "6de38394798aab338a5487e36a4044b5",
     "format" : "model",
-    "displayName" : "dsg.usdz"
+    "displayName" : "ttg.usdz"
+  },
+  {
+    "libraryIdentifier" : "44b6b77641912c6a40cd81843b7e2385",
+    "format" : "model",
+    "displayName" : "dsg_USDZ.usdz"
+  },
+  {
+    "libraryIdentifier" : "33793704165820ef9e4c8666247da7f1",
+    "format" : "model",
+    "displayName" : "adg_qlj.usdz"
   }
 ]

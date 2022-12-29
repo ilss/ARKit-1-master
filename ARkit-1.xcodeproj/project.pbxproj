@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B205A6BC2948104A0042B2FD /* belfast_sunset_puresky_1k.skybox in Resources */ = {isa = PBXBuildFile; fileRef = B205A6BB2948104A0042B2FD /* belfast_sunset_puresky_1k.skybox */; };
+		B205A6C0294829D60042B2FD /* One.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B205A6BF294829D60042B2FD /* One.rcproject */; };
 		B20D5C332935D58F008C9464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D5C322935D58F008C9464 /* AppDelegate.swift */; };
 		B20D5C352935D58F008C9464 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D5C342935D58F008C9464 /* ContentView.swift */; };
 		B20D5C392935D590008C9464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20D5C382935D590008C9464 /* Assets.xcassets */; };
 		B20D5C3C2935D590008C9464 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20D5C3B2935D590008C9464 /* Preview Assets.xcassets */; };
-		B2A93FFE29417204009B7591 /* One.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B2A93FFD29417204009B7591 /* One.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B205A6BB2948104A0042B2FD /* belfast_sunset_puresky_1k.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = belfast_sunset_puresky_1k.skybox; sourceTree = "<group>"; };
+		B205A6BF294829D60042B2FD /* One.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = One.rcproject; sourceTree = "<group>"; };
 		B20D5C2F2935D58F008C9464 /* ARkit-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARkit-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20D5C322935D58F008C9464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B20D5C342935D58F008C9464 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B20D5C382935D590008C9464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20D5C3B2935D590008C9464 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B2A93FFD29417204009B7591 /* One.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = One.rcproject; sourceTree = "<group>"; };
 		B2A93FFF29418396009B7591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,10 +56,11 @@
 		B20D5C312935D58F008C9464 /* ARkit-1 */ = {
 			isa = PBXGroup;
 			children = (
+				B205A6BB2948104A0042B2FD /* belfast_sunset_puresky_1k.skybox */,
 				B2A93FFF29418396009B7591 /* Info.plist */,
 				B20D5C322935D58F008C9464 /* AppDelegate.swift */,
+				B205A6BF294829D60042B2FD /* One.rcproject */,
 				B20D5C342935D58F008C9464 /* ContentView.swift */,
-				B2A93FFD29417204009B7591 /* One.rcproject */,
 				B20D5C382935D590008C9464 /* Assets.xcassets */,
 				B20D5C3A2935D590008C9464 /* Preview Content */,
 			);
@@ -130,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B205A6BC2948104A0042B2FD /* belfast_sunset_puresky_1k.skybox in Resources */,
 				B20D5C3C2935D590008C9464 /* Preview Assets.xcassets in Resources */,
 				B20D5C392935D590008C9464 /* Assets.xcassets in Resources */,
 			);
@@ -144,7 +148,7 @@
 			files = (
 				B20D5C352935D58F008C9464 /* ContentView.swift in Sources */,
 				B20D5C332935D58F008C9464 /* AppDelegate.swift in Sources */,
-				B2A93FFE29417204009B7591 /* One.rcproject in Sources */,
+				B205A6C0294829D60042B2FD /* One.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +289,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +326,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

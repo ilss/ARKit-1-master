@@ -9,21 +9,9 @@ import SwiftUI
 import RealityKit
 
 
-class Lighting: Entity, HasDirectionalLight {
-    
-    required init() {
-        super.init()
-        
-        self.light = DirectionalLightComponent(color: .white,
-                                           intensity: 4000,
-                                    isRealWorldProxy: true)
-    }
-}
-
 struct ContentView : View {
     var body: some View {
         ZStack {
-           
             ARViewContainer().edgesIgnoringSafeArea(.all)
 //            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
 //            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
@@ -32,18 +20,45 @@ struct ContentView : View {
     }
 }
 
-var roboAnchor:One.MainScene!
+class CustomSpotLight: Entity, HasSpotLight {
+    required init() {
+        super.init()
+        self.light = SpotLightComponent(color: .white,
+                                    intensity: 250000,
+                          innerAngleInDegrees: 70,
+                          outerAngleInDegrees: 120,
+                            attenuationRadius: 9.0)
+        self.shadow = SpotLightComponent.Shadow()
+        self.position.y = 5.0
+        self.orientation = simd_quatf(angle: -.pi/1.5,
+                                       axis: [1,0,0])
+    }
+}
+
+
 struct ARViewContainer: UIViewRepresentable {
-   
+    let roboAnchor = try! One.loadMainScene()
+    
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        roboAnchor = try! One.loadMainScene()
-//        roboAnchor.generateCollisionShapes(recursive: true)
-        let dLight = Lighting()
-        dLight.orientation = simd_quatf(angle: .pi/8,
-                                                axis: [0, 1, 0])
-        roboAnchor.addChild(dLight)
+        
+    
+        
+        if let tst = roboAnchor.tst {
+            if let tst = tst as? Entity & HasCollision {
+                tst.generateCollisionShapes(recursive: true)
+                arView.installGestures(.all, for: tst)
+            }
+        }
+        
+        if let ttg = roboAnchor.ttg {
+            if let ttg = ttg as? Entity & HasCollision {
+                ttg.generateCollisionShapes(recursive: true)
+                arView.installGestures(.all, for: ttg)
+            }
+        }
+        
         if let dsg = roboAnchor.dsg {
             if let dsg = dsg as? Entity & HasCollision {
                 dsg.generateCollisionShapes(recursive: true)
@@ -53,15 +68,31 @@ struct ARViewContainer: UIViewRepresentable {
         
         arView.scene.anchors.append(roboAnchor)
         
+        let dLight = CustomSpotLight()
+        let directLightAnchor = AnchorEntity()
+        directLightAnchor.addChild(dLight)
+        arView.scene.anchors.append(directLightAnchor)
         
+        let skyboxName = "belfast_sunset_puresky_1k"
+        let skyboxResource = try! EnvironmentResource.load(named: skyboxName)
+        arView.environment.lighting.resource = skyboxResource
+        
+        
+
         
         return arView
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+            
+  
+        }
     
 }
+
+
+
 
 
 #if DEBUG
