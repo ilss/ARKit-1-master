@@ -13,6 +13,7 @@
 		B20D5C352935D58F008C9464 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D5C342935D58F008C9464 /* ContentView.swift */; };
 		B20D5C392935D590008C9464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20D5C382935D590008C9464 /* Assets.xcassets */; };
 		B20D5C3C2935D590008C9464 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20D5C3B2935D590008C9464 /* Preview Assets.xcassets */; };
+		B2C5186A2963C22300CD15B6 /* Warehouse.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B2C518692963C22300CD15B6 /* Warehouse.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B20D5C382935D590008C9464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20D5C3B2935D590008C9464 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2A93FFF29418396009B7591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B2C518692963C22300CD15B6 /* Warehouse.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Warehouse.rcproject; path = "Preview Content/Warehouse.rcproject"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B2A93FFF29418396009B7591 /* Info.plist */,
 				B20D5C322935D58F008C9464 /* AppDelegate.swift */,
 				B205A6BF294829D60042B2FD /* One.rcproject */,
+				B2C518692963C22300CD15B6 /* Warehouse.rcproject */,
 				B20D5C342935D58F008C9464 /* ContentView.swift */,
 				B20D5C382935D590008C9464 /* Assets.xcassets */,
 				B20D5C3A2935D590008C9464 /* Preview Content */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C5186A2963C22300CD15B6 /* Warehouse.rcproject in Sources */,
 				B20D5C352935D58F008C9464 /* ContentView.swift in Sources */,
 				B20D5C332935D58F008C9464 /* AppDelegate.swift in Sources */,
 				B205A6C0294829D60042B2FD /* One.rcproject in Sources */,

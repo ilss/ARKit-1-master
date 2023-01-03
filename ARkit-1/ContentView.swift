@@ -38,28 +38,29 @@ class CustomSpotLight: Entity, HasSpotLight {
 
 struct ARViewContainer: UIViewRepresentable {
     let roboAnchor = try! One.loadMainScene()
+    let ttgAnchor = try! One.loadTtgScene()
+    let dsgAnchor = try! One.loadDsgScene()
+//    let roboAnchor = try! Warehouse.loadMainScene()
     
     func makeUIView(context: Context) -> ARView {
         
-        let arView = ARView(frame: .zero)
-        
-    
+        let arView = ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
         
         if let tst = roboAnchor.tst {
             if let tst = tst as? Entity & HasCollision {
                 tst.generateCollisionShapes(recursive: true)
                 arView.installGestures(.all, for: tst)
             }
-        }
-        
-        if let ttg = roboAnchor.ttg {
+            }
+            
+        if let ttg = ttgAnchor.ttg {
             if let ttg = ttg as? Entity & HasCollision {
                 ttg.generateCollisionShapes(recursive: true)
                 arView.installGestures(.all, for: ttg)
             }
         }
         
-        if let dsg = roboAnchor.dsg {
+        if let dsg = dsgAnchor.dsg {
             if let dsg = dsg as? Entity & HasCollision {
                 dsg.generateCollisionShapes(recursive: true)
                 arView.installGestures(.all, for: dsg)
@@ -76,18 +77,11 @@ struct ARViewContainer: UIViewRepresentable {
         let skyboxName = "belfast_sunset_puresky_1k"
         let skyboxResource = try! EnvironmentResource.load(named: skyboxName)
         arView.environment.lighting.resource = skyboxResource
-        
-        
-
-        
+ 
         return arView
-        
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {
-            
-  
-        }
+    func updateUIView(_ uiView: ARView, context: Context) {}
     
 }
 
