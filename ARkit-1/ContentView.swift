@@ -11,7 +11,7 @@ import RealityKit
 
 struct ContentView : View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             ARViewContainer().edgesIgnoringSafeArea(.all)
 //            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
 //            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
@@ -37,6 +37,7 @@ class CustomSpotLight: Entity, HasSpotLight {
 
 
 struct ARViewContainer: UIViewRepresentable {
+    
     let roboAnchor = try! One.loadMainScene()
     let ttgAnchor = try! One.loadTtgScene()
     let dsgAnchor = try! One.loadDsgScene()
@@ -45,6 +46,7 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
+        arView.debugOptions = [.showFeaturePoints,.showWorldOrigin]
         
         if let tst = roboAnchor.tst {
             if let tst = tst as? Entity & HasCollision {
@@ -77,11 +79,17 @@ struct ARViewContainer: UIViewRepresentable {
         let skyboxName = "belfast_sunset_puresky_1k"
         let skyboxResource = try! EnvironmentResource.load(named: skyboxName)
         arView.environment.lighting.resource = skyboxResource
- 
+        
+        
+      
         return arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+        print("11111")
+    }
+    
+    
     
 }
 
